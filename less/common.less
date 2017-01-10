@@ -1,0 +1,89 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.anchor(@x: 50%, @y: 50%) {
+  -webkit-transform-origin: @x @y;
+  -ms-transform-origin: @x @y;
+  transform-origin: @x @y;
+}
+.transform(@t) {
+  -webkit-transform: @t;
+  -ms-transform: @t;
+  transform: @t;
+}
+.translate(@x: 0, @y: 0) {
+  .transform(translate3d(@x, @y, 0));
+}
+.rotate(@r: 0deg) {
+  .transform(rotate(@r));
+}
+.absolute() {
+  position: absolute;
+}
+.relative() {
+  position: relative;
+}
+.position(@left: 0, @top: 0) {
+  left: @left;
+  top: @top;
+}
+.gradient(@a, @b) {
+  background: @a;
+  background: -moz-linear-gradient(top, @a 0%, @b 100%);
+  background: -webkit-linear-gradient(top, @a 0%, @b 100%);
+  background: linear-gradient(to bottom, @a 0%, @b 100%);
+}
+.block() {
+  display: block;
+}
+.size(@w: 50px, @h: 50px) {
+  width: @w;
+  height: @h;
+}
+.centered() {
+  position: fixed;
+  .position(50%, 50%);
+  .translate(-50%, -50%);
+}
+.color(@c: #000) {
+  background-color: @c;
+}
+.radius(@r) {
+  border-radius: @r;
+}
+.circle() {
+  .radius(50%);
+}
+.shadow(@r: 0 6px 3px rgba(0, 0, 0, .1)) {
+  box-shadow: @r;
+}
+.triang-body() {
+  .block;
+  .size(0, 0);
+  border-style: solid;
+}
+.triang(@b: 20px, @h: 17px, @c: #000) {
+  .triang-body;
+  border-width: 0 (0.5 * @b) @h;
+  border-color: transparent transparent @c;
+}
+.triang-bottom(@b: 20px, @h: 17px, @c: #000) {
+  .triang-body;
+  border-width: @h (0.5 * @b) 0;
+  border-color: @c transparent transparent;
+}
+// .triang-left(@b: 20px, @h: 17px, @c: #000) {
+//   .triang-body;
+//   border-width: (0.5 * @b) @h (0.5 * @b) 0;
+//   border-color: transparent @c transparent transparent;
+// }
+// .triang-right(@b: 20px, @h: 17px, @c: #000) {
+//   .triang-body;
+//   border-width: (0.5 * @b) 0 (0.5 * @b) @h;
+//   border-color: transparent transparent transparent @c;
+// }
+// .op(@o: 1) {
+//   opacity: @o;
+// }
