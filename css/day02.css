@@ -1,0 +1,274 @@
+/* Part of my own reset */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* LESS Utils */
+.elephant {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  width: 470px;
+  height: 320px;
+}
+.head {
+  position: absolute;
+  z-index: 10;
+  left: 40px;
+  top: 20px;
+  width: 130px;
+  height: 260px;
+  border-radius: 50% 50% 50% 0;
+  overflow: hidden;
+  -webkit-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+.head .head-circles {
+  width: 400px;
+  height: 400px;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 122px;
+  left: -80px;
+}
+.head .head-circles .head-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 23px solid #3AB4FF;
+}
+.head .head-circles .head-circle.p2 {
+  width: 380px;
+  height: 360px;
+  top: 20px;
+}
+.head .head-circles .head-circle.p3 {
+  width: 360px;
+  height: 320px;
+  top: 40px;
+}
+.head .head-circles .head-circle.p4 {
+  width: 340px;
+  height: 280px;
+  top: 60px;
+}
+.head .head-circles .head-circle.p5 {
+  width: 320px;
+  height: 240px;
+  top: 80px;
+}
+.head .head-back {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  background-color: #2baeff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.eye {
+  position: absolute;
+  z-index: 12;
+  left: 79px;
+  top: 88px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 3px solid #003f66;
+  box-shadow: 0 6px 0 rgba(0, 63, 102, 0.3);
+}
+.eye .pupil {
+  position: absolute;
+  left: 1px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #003f66;
+  overflow: hidden;
+}
+.eye .pupil .pupil-shine {
+  position: absolute;
+  left: 8px;
+  top: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border-left: 3px solid #FFF;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.horn {
+  position: absolute;
+  z-index: 14;
+  left: 100px;
+  top: 125px;
+  background-color: #3AB4FF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.horn .marfil {
+  position: absolute;
+  left: -92px;
+  top: -68px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border-top: 15px solid transparent;
+  border-right: 15px solid #F7DCA0;
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.ear {
+  position: absolute;
+  z-index: 15;
+  left: 134px;
+  top: 26px;
+  width: 110px;
+  height: 125px;
+  border-radius: 50% 35% 15% 50%;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  background: #009EFF;
+  background: -moz-linear-gradient(top, #009EFF 0%, #3BEFF2 100%);
+  background: -webkit-linear-gradient(top, #009EFF 0%, #3BEFF2 100%);
+  background: linear-gradient(to bottom, #009EFF 0%, #3BEFF2 100%);
+}
+.ear .ear-cut {
+  position: absolute;
+  left: 90px;
+  top: 38px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 30px;
+  border-color: transparent transparent #009EFF;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.body {
+  position: absolute;
+  z-index: 5;
+  left: 125px;
+  top: 20px;
+}
+.body .body-front {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #009EFF;
+}
+.body .body-back {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  border-radius: 50%;
+  width: 230px;
+  height: 200px;
+  background-color: #009EFF;
+}
+.body .leg-front {
+  font-size: 0;
+  white-space: nowrap;
+  position: absolute;
+  left: 23px;
+  top: 158px;
+  width: 54px;
+  height: 110px;
+  background: #009EFF;
+  background: -moz-linear-gradient(top, #009EFF 0%, #3BEFF2 100%);
+  background: -webkit-linear-gradient(top, #009EFF 0%, #3BEFF2 100%);
+  background: linear-gradient(to bottom, #009EFF 0%, #3BEFF2 100%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.body .leg-back {
+  font-size: 0;
+  white-space: nowrap;
+  position: absolute;
+  left: 170px;
+  top: 158px;
+  width: 64px;
+  height: 110px;
+  background: #009EFF;
+  background: -moz-linear-gradient(top, #009EFF 0%, #3BEFF2 100%);
+  background: -webkit-linear-gradient(top, #009EFF 0%, #3BEFF2 100%);
+  background: linear-gradient(to bottom, #009EFF 0%, #3BEFF2 100%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.body .nail {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #003f66;
+  position: relative;
+  left: -4px;
+  top: 101px;
+}
+.body .tail {
+  position: absolute;
+  left: 215px;
+  top: 89px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 15px solid transparent;
+  border-right: 10px solid #009EFF;
+  -webkit-transform: rotate(-36deg);
+  -ms-transform: rotate(-36deg);
+  transform: rotate(-36deg);
+}
+.body .tail .tail-back {
+  position: absolute;
+  left: 53px;
+  top: 78px;
+  width: 15px;
+  height: 15px;
+  background: #009EFF;
+  background: -moz-linear-gradient(top, #009EFF 0%, transparent 100%);
+  background: -webkit-linear-gradient(top, #009EFF 0%, transparent 100%);
+  background: linear-gradient(to bottom, #009EFF 0%, transparent 100%);
+  border-radius: 50% 50% 0 0;
+  -webkit-transform: rotate(52deg);
+  -ms-transform: rotate(52deg);
+  transform: rotate(52deg);
+}
+.shadow {
+  position: absolute;
+  left: 90px;
+  top: 257px;
+  border-radius: 50%;
+  width: 320px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.05);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 100%);
+}

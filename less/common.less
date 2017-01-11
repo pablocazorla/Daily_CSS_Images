@@ -1,8 +1,11 @@
+/* Part of my own reset */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+/* LESS Utils */
 .anchor(@x: 50%, @y: 50%) {
   -webkit-transform-origin: @x @y;
   -ms-transform-origin: @x @y;
@@ -53,7 +56,11 @@
 .radius(@r) {
   border-radius: @r;
 }
-.circle() {
+.circle(@w: 0) {
+  & when (@w > 0) {
+    width: @w;
+    height: @w;
+  }
   .radius(50%);
 }
 .shadow(@r: 0 6px 3px rgba(0, 0, 0, .1)) {
@@ -74,16 +81,9 @@
   border-width: @h (0.5 * @b) 0;
   border-color: @c transparent transparent;
 }
-// .triang-left(@b: 20px, @h: 17px, @c: #000) {
-//   .triang-body;
-//   border-width: (0.5 * @b) @h (0.5 * @b) 0;
-//   border-color: transparent @c transparent transparent;
-// }
-// .triang-right(@b: 20px, @h: 17px, @c: #000) {
-//   .triang-body;
-//   border-width: (0.5 * @b) 0 (0.5 * @b) @h;
-//   border-color: transparent transparent transparent @c;
-// }
-// .op(@o: 1) {
-//   opacity: @o;
-// }
+.z(@n:0){
+  z-index:@n;
+}
+.nowrap(){
+  white-space: nowrap;
+}
